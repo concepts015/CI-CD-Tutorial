@@ -44,6 +44,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
+            sudo bash install_docker.sh
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/ci-cd-tutorial:latest
             sudo docker stop ci-cd-tutorial || true
             sudo docker rm ci-cd-tutorial || true
