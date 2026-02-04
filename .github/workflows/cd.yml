@@ -3,7 +3,7 @@ name: CI/CD with Docker for Node.js + TypeScript
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
